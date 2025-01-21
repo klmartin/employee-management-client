@@ -19,7 +19,7 @@ const EmployeeForm = ({ onAdd }) => {
         };
 
         try {
-            const response = await axios.post("http://localhost:8000/employees", newEmployee);
+            const response = await axios.post("https://bangapp.pro/employee-management/public/employees", newEmployee);
             onAdd(response.data);
             setFirstName("");
             setLastName("");
