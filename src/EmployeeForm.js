@@ -17,7 +17,7 @@ const EmployeeForm = ({ onAdd }) => {
             last_name: lastName,
             job_title: jobTitle,
             department: department,
-            empid:empid
+            emp_id:empid
         };
 
         try {
