@@ -11,7 +11,7 @@ const App = () => {
     useEffect(() => {
         // Fetch the employee list from the API
         const fetchEmployees = async () => {
-            const response = await axios.get("http://localhost:8000/employees");
+            const response = await axios.get("https://bangapp.pro/employee-management/public/employees");
             setEmployees(response.data);
         };
 
