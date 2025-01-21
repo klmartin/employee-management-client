@@ -5,6 +5,7 @@ import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 const EmployeeForm = ({ onAdd }) => {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
+    const[empid, setEmpId] = useState("");
     const [jobTitle, setJobTitle] = useState("");
     const [department, setDepartment] = useState("");
 
@@ -16,6 +17,7 @@ const EmployeeForm = ({ onAdd }) => {
             last_name: lastName,
             job_title: jobTitle,
             department: department,
+            empid:empid
         };
 
         try {
@@ -25,6 +27,7 @@ const EmployeeForm = ({ onAdd }) => {
             setLastName("");
             setJobTitle("");
             setDepartment("");
+            setEmpId("");
         } catch (error) {
             console.error("Error adding employee", error);
         }
@@ -50,6 +53,16 @@ const EmployeeForm = ({ onAdd }) => {
                     placeholder="Last Name"
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
+                />
+            </FormGroup>
+            <FormGroup>
+                <Label for="lastName">Emp Id</Label>
+                <Input
+                    type="text"
+                    id="empid"
+                    placeholder="Last Name"
+                    value={empid}
+                    onChange={(e) => setEmpId(e.target.value)}
                 />
             </FormGroup>
             <FormGroup>
